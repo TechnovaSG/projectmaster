@@ -153,7 +153,9 @@ input {
 }
 
 .logo {
-    width: 270px;
+  display: block;
+  width: 150px;
+  height: auto;
 }
 
 #data-hoje {
