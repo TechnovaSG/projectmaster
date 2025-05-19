@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="fonts.css">
+      <link rel="stylesheet" href="media.css">
+      
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("LTK3SzXQLXlZkwOJH");
+  })();
+</script>
+
+</head>
+
+<body>
+      <header>
+            <div id="title">
+                 <!-- <h1>TechNova</h1>
+                  <h1>Solutions</h1>-->
+                  <a href="index.html"><img class="logo" src="logo.jpg" alt="logo"></a>
+            </div>
+
+      <!--<ul>
+                  <a href="http://127.0.0.1:5500/index.html"><li>Inicio</li></a>
+                  <a href="orcamentopessoal.html" target="_blank"><li>Orçamento Pessoal</li></a>
+                  <a href="#"><li>Orçamento Empresarial</li></a>
+                  <a href="https://wa.me/5531991342575" target="_blank" rel="noopener noreferrer" id="inscreva-se-btn"><li>WhatsApp</li></a>
+
+            </ul>
+      -->
+
+      <ul>
+            <li><a href="index.html">Início</a></li>
+
+            <li class="dropdown">
+            <a href="#">Orçamentos &#9662</a>
+            <ul class="dropdown-menu">
+            <li><a href="orcamentopessoal.html" target="_blank">Pessoal</a></li>
+            <li><a href="orcamentoempresarial.html" target="_blank">Empresarial</a></li>
+      </ul>
+  </li>
+
+  <li>
+    <a href="https://wa.me/5531991342575" target="_blank" rel="noopener noreferrer" id="inscreva-se-btn">
+      WhatsApp</a>
+  </li>
+      </ul>
+
+      </header>
+
+      <main>
+            <aside>
+                  <h2>Sobre a</h2>
+                  <h2><span>TechNova</span></h2>
+                  <p>Criada em 15/09/2024, a TechNova Solutions é uma empresa que constitui em soluções de problemas básicos, mas que muitas vezes você não encontra com facilidade. Esses problemas podem ser: manutenção de computadores, micro computadores, notebooks, configuração de impressora de escritórios, impressoras fiscais, instalação de roteadores e até mesmo criação de sites para uma boa visibilidade da sua empresa, comércio e blogs pessoais. Nós visamos a facilidade no seu dia-a-dia sem se preocupar com preços absurdos e o mais importante, entregamos no prazo. Conheça um pouco mais dos nossos serviços clicando <a href="#"><strong>AQUI</strong></a>.</p>
+
+                  <h3 class="novidades">Insira seu e-mail para acompanhar todas as novidades</h3>
+
+                  <form id="form-inscricao">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="submit" value="Enviar >">
+                  </form>
+            </aside>
+
+            <article>
+                  <img src="dev.png" alt="dev">
+            </article>
+      </main>
+
+<script src="script.js"></script>
+
+<script>
+  const form = document.getElementById('form-inscricao');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // evita recarregar a página
+
+    emailjs.sendForm('technovamaster', 'technovaauto', this)
+      .then(function() {
+        alert('Inscrição enviada com sucesso!');
+        form.reset(); // limpa o formulário
+      }, function(error) {
+        alert('Erro ao enviar: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+
+
+
+</body>
+</html>
